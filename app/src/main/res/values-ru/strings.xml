@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Визитка</string>
+
+    <string name="name">Русских Никита</string>
+    <string name="title">студент 3его курса, группа Б23-191-2</string>
+
+    <string name="phone">89120169319</string>
+    <string name="social">@Nukuatuk</string>
+    <string name="email">nukuatukd1d3@gmail.com</string>
+
+    <string name="cd_logo">Логотип</string>
+    <string name="cd_phone">Телефон</string>
+    <string name="cd_social">Соцсеть</string>
+    <string name="cd_email">Почта</string>
+</resources>
