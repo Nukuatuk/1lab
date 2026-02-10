@@ -90,7 +90,6 @@ fun BusinessCardScreen() {
         }
     }
 }
-
 @Composable
 private fun ProfileBlock(modifier: Modifier = Modifier) {
     val logoSize = dimensionResource(id = R.dimen.logo_size)
@@ -135,7 +134,6 @@ private fun ProfileBlock(modifier: Modifier = Modifier) {
         )
     }
 }
-
 @Composable
 private fun ContactsBlock(modifier: Modifier = Modifier) {
     Column(
@@ -148,7 +146,6 @@ private fun ContactsBlock(modifier: Modifier = Modifier) {
         ContactRow(icon = Icons.Default.Email, cd = R.string.cd_email, textRes = R.string.email)
     }
 }
-
 @Composable
 private fun ContactRow(
     icon: androidx.compose.ui.graphics.vector.ImageVector,

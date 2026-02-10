@@ -3,11 +3,9 @@
     <dimen name="padding_block">16dp</dimen>
     <dimen name="logo_size">96dp</dimen>
     <dimen name="logo_corner">10dp</dimen>
-
     <dimen name="space_s">8dp</dimen>
     <dimen name="space_m">12dp</dimen>
     <dimen name="space_l">24dp</dimen>
-
     <dimen name="text_name">34sp</dimen>
     <dimen name="text_title">14sp</dimen>
     <dimen name="text_contact">14sp</dimen>
