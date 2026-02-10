@@ -1,15 +1,2 @@
 <resources>
-    <string name="app_name">Business Card</string>
-
-    <string name="name">Russkikh Nikita</string>
-    <string name="title">hird-year student, group Б23-191-2</string>
-
-    <string name="phone">89120169319</string>
-    <string name="social">@Nukuatuk</string>
-    <string name="email">nukuatukd1d3@gmail.com</string>
-
-    <string name="cd_logo">Logo</string>
-    <string name="cd_phone">Phone</string>
-    <string name="cd_social">Social</string>
-    <string name="cd_email">Email</string>
 </resources>
