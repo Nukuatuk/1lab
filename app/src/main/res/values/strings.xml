@@ -1,14 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Business Card</string>
+    <string name="app_name">Галерея</string>
 
-    <string name="name">Russkikh Nikita</string>
-    <string name="title">hird-year student, group Б23-191-2</string>
-    <string name="phone">89120169319</string>
-    <string name="social">@Nukuatuk</string>
-    <string name="email">nukuatukd1d3@gmail.com</string>
+    <string name="prev">Предыдущий</string>
+    <string name="next">Следующий</string>
 
-    <string name="cd_logo">Logo</string>
-    <string name="cd_phone">Phone</string>
-    <string name="cd_social">Social</string>
-    <string name="cd_email">Email</string>
+    <string name="cd_prev_button">Показать предыдущее фото</string>
+    <string name="cd_next_button">Показать следующее фото</string>
+
+    <string name="art1_title">Загадочный кот</string>
+    <string name="art1_author">Лондон(2002)</string>
+    <string name="art1_cd">Фото загадочного кота</string>
+
+    <string name="art2_title">Крадящийся кот</string>
+    <string name="art2_author">Сочи(1999)</string>
+    <string name="art2_cd">Фото крадящегося кота</string>
+
+    <string name="art3_title">Огненная лошадь</string>
+    <string name="art3_author">Рим(1250)</string>
+    <string name="art3_cd">Фото огненной лошади</string>
 </resources>

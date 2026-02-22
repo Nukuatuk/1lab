@@ -1,12 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Business Card</string>
-    <string name="name">Russkikh Nikita</string>
-    <string name="title">hird-year student, group Б23-191-2</string>
-    <string name="phone">89120169319</string>
-    <string name="social">@Nukuatuk</string>
-    <string name="email">nukuatukd1d3@gmail.com</string>
-    <string name="cd_logo">Logo</string>
-    <string name="cd_phone">Phone</string>
-    <string name="cd_social">Social</string>
-    <string name="cd_email">Email</string>
+    <string name="app_name">Gallery</string>
+
+    <string name="prev">Previous</string>
+    <string name="next">Next</string>
+
+    <string name="cd_prev_button">Show previous photo</string>
+    <string name="cd_next_button">Show next photo</string>
+
+    <string name="art1_title">Mysterious Cat</string>
+    <string name="art1_author">London (2002)</string>
+    <string name="art1_cd">Photo of a mysterious cat</string>
+
+    <string name="art2_title">Sneaking Cat</string>
+    <string name="art2_author">Sochi (1999)</string>
+    <string name="art2_cd">Photo of a sneaking cat</string>
+
+    <string name="art3_title">Fiery Horse</string>
+    <string name="art3_author">Rome (1250)</string>
+    <string name="art3_cd">Photo of a fiery horse</string>
 </resources>
