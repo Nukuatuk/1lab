@@ -1,174 +1,206 @@
 package com.example.a1lab
 
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.annotation.StringRes
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Phone
-import androidx.compose.material.icons.filled.Share
-import androidx.compose.material3.Icon
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.Image
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Surface {
-                BusinessCardScreen()
+            MaterialTheme {
+                Surface {
+                    GalleryScreen()
+                }
             }
         }
     }
 }
 
 @Composable
-fun BusinessCardScreen() {
-    val bg = colorResource(id = R.color.card_bg)
+fun GalleryScreen() {
+    // Коллекция в памяти (минимум 3)
+    val artworks = remember {
+        listOf(
+            Artwork(
+                imageRes = R.drawable.art_1,
+                titleRes = R.string.art1_title,
+                authorRes = R.string.art1_author,
+                cdRes = R.string.art1_cd
+            ),
+            Artwork(
+                imageRes = R.drawable.art_2,
+                titleRes = R.string.art2_title,
+                authorRes = R.string.art2_author,
+                cdRes = R.string.art2_cd
+            ),
+            Artwork(
+                imageRes = R.drawable.art_3,
+                titleRes = R.string.art3_title,
+                authorRes = R.string.art3_author,
+                cdRes = R.string.art3_cd
+            )
+        )
+    }
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(bg)
-            .padding(dimensionResource(id = R.dimen.padding_screen))
-    ) {
-        // Скролл гарантирует, что на маленьких экранах ничего не обрежется
-        val scrollState = rememberScrollState()
+    // Состояние, сохраняемое при повороте
+    var index by rememberSaveable { mutableIntStateOf(0) }
 
-        // Адаптив: в портрете — колонка, в альбоме — "два блока" рядом
-        val isLandscape = androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp >
-                androidx.compose.ui.platform.LocalConfiguration.current.screenHeightDp
+    val isFirst = index == 0
+    val isLast = index == artworks.lastIndex
+    val current = artworks[index]
 
-        if (isLandscape) {
-            Row(
+    val cfg = LocalConfiguration.current
+    val isLandscape = cfg.screenWidthDp > cfg.screenHeightDp
+
+    // Скролл на случай маленьких экранов/шрифтов
+    val scroll = rememberScrollState()
+
+    if (isLandscape) {
+        Row(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(20.dp)
+                .verticalScroll(scroll),
+            horizontalArrangement = Arrangement.spacedBy(20.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            ArtworkImage(
+                artwork = current,
                 modifier = Modifier
-                    .fillMaxSize()
-                    .verticalScroll(scrollState),
-                horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.space_l)),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                ProfileBlock(
-                    modifier = Modifier
-                        .weight(1f)
-                        .fillMaxHeight()
-                )
-                ContactsBlock(
-                    modifier = Modifier
-                        .weight(1f)
-                        .fillMaxHeight()
-                )
-            }
-        } else {
+                    .weight(1f)
+                    .fillMaxWidth()
+            )
             Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .verticalScroll(scrollState),
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Spacer(Modifier.height(dimensionResource(id = R.dimen.space_l)))
-                ProfileBlock()
-                Spacer(Modifier.height(dimensionResource(id = R.dimen.space_l)))
-                ContactsBlock()
-                Spacer(Modifier.height(dimensionResource(id = R.dimen.space_l)))
+                ArtworkDescription(artwork = current)
+                NavButtons(
+                    isFirst = isFirst,
+                    isLast = isLast,
+                    onPrev = { if (!isFirst) index-- },
+                    onNext = { if (!isLast) index++ }
+                )
             }
         }
-    }
-}
-@Composable
-private fun ProfileBlock(modifier: Modifier = Modifier) {
-    val logoSize = dimensionResource(id = R.dimen.logo_size)
-    val nameSize = dimensionResource(id = R.dimen.text_name).value
-    val titleSize = dimensionResource(id = R.dimen.text_title).value
-
-    Column(
-        modifier = modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Box(
+    } else {
+        Column(
             modifier = Modifier
-                .size(logoSize)
-                .background(colorResource(id = R.color.logo_bg))
-                .padding(12.dp),
-            contentAlignment = Alignment.Center
+                .fillMaxSize()
+                .padding(20.dp)
+                .verticalScroll(scroll),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_android),
-                contentDescription = stringResource(id = R.string.cd_logo),
-                modifier = Modifier.fillMaxSize()
+            Spacer(Modifier.height(16.dp))
+            ArtworkImage(artwork = current, modifier = Modifier.fillMaxWidth())
+            Spacer(Modifier.height(16.dp))
+            ArtworkDescription(artwork = current)
+            Spacer(Modifier.height(24.dp))
+            NavButtons(
+                isFirst = isFirst,
+                isLast = isLast,
+                onPrev = { if (!isFirst) index-- },
+                onNext = { if (!isLast) index++ }
             )
+            Spacer(Modifier.height(16.dp))
         }
-
-        Spacer(Modifier.height(dimensionResource(id = R.dimen.space_m)))
-
-        Text(
-            text = stringResource(id = R.string.name),
-            color = colorResource(id = R.color.text_primary),
-            fontSize = androidx.compose.ui.unit.TextUnit(nameSize, androidx.compose.ui.unit.TextUnitType.Sp)
-        )
-
-        Spacer(Modifier.height(dimensionResource(id = R.dimen.space_s)))
-
-        Text(
-            text = stringResource(id = R.string.title),
-            color = colorResource(id = R.color.text_secondary),
-            fontSize = androidx.compose.ui.unit.TextUnit(titleSize, androidx.compose.ui.unit.TextUnitType.Sp),
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis
-        )
     }
 }
+
 @Composable
-private fun ContactsBlock(modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.space_s)),
-        horizontalAlignment = Alignment.Start
+private fun ArtworkImage(artwork: Artwork, modifier: Modifier = Modifier) {
+    // contentDescription из strings.xml (accessibility)
+    val cd = stringResource(id = artwork.cdRes)
+
+    Box(
+        modifier = modifier,
+        contentAlignment = Alignment.Center
     ) {
-        ContactRow(icon = Icons.Default.Phone, cd = R.string.cd_phone, textRes = R.string.phone)
-        ContactRow(icon = Icons.Default.Share, cd = R.string.cd_social, textRes = R.string.social)
-        ContactRow(icon = Icons.Default.Email, cd = R.string.cd_email, textRes = R.string.email)
+        Image(
+            painter = painterResource(id = artwork.imageRes),
+            contentDescription = cd,
+            modifier = Modifier
+                .fillMaxWidth()
+                .aspectRatio(1.1f) // чтобы в портрете не занимало всю высоту
+        )
     }
 }
+
 @Composable
-private fun ContactRow(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
-    @StringRes cd: Int,
-    @StringRes textRes: Int
+private fun ArtworkDescription(artwork: Artwork) {
+    Text(
+        text = stringResource(id = artwork.titleRes),
+        style = MaterialTheme.typography.titleLarge,
+        textAlign = TextAlign.Center
+    )
+    Text(
+        text = stringResource(id = artwork.authorRes),
+        style = MaterialTheme.typography.bodyMedium,
+        fontWeight = FontWeight.SemiBold,
+        textAlign = TextAlign.Center
+    )
+}
+
+@Composable
+private fun NavButtons(
+    isFirst: Boolean,
+    isLast: Boolean,
+    onPrev: () -> Unit,
+    onNext: () -> Unit
 ) {
+    val prevCd = stringResource(R.string.cd_prev_button)
+    val nextCd = stringResource(R.string.cd_next_button)
+    val prevText = stringResource(R.string.prev)
+    val nextText = stringResource(R.string.next)
+
     Row(
         modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.space_m))
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Icon(
-            imageVector = icon,
-            contentDescription = stringResource(id = cd),
-            tint = colorResource(id = R.color.accent)
-        )
-        Text(
-            text = stringResource(id = textRes),
-            color = colorResource(id = R.color.text_primary),
-            fontSize = dimensionResource(id = R.dimen.text_contact).value
-                .let { androidx.compose.ui.unit.TextUnit(it, androidx.compose.ui.unit.TextUnitType.Sp) },
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
+        Button(
+            onClick = onPrev,
+            enabled = !isFirst,
+            modifier = Modifier.semantics {
+                contentDescription = prevCd
+            }
+        ) {
+            Text(text = prevText)
+        }
+
+        Button(
+            onClick = onNext,
+            enabled = !isLast,
+            modifier = Modifier.semantics {
+                contentDescription = nextCd
+            }
+        ) {
+            Text(text = nextText)
+        }
     }
 }
