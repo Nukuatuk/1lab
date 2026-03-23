@@ -1,12 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Визитка</string>
-    <string name="name">Русских Никита</string>
-    <string name="title">студент 3его курса, группа Б23-191-2</string>
-    <string name="phone">89120169319</string>
-    <string name="social">@Nukuatuk</string>
-    <string name="email">nukuatukd1d3@gmail.com</string>
-    <string name="cd_logo">Логотип</string>
-    <string name="cd_phone">Телефон</string>
-    <string name="cd_social">Соцсеть</string>
-    <string name="cd_email">Почта</string>
+    <string name="app_name">Советы на каждый день</string>
+    <string name="day_number">День %1$d</string>
+    <string name="day_preview">День 1</string>
+    <string name="title_preview">Название совета</string>
+    <string name="description_preview">Краткое описание совета</string>
+    <string name="tip_image">Изображение совета</string>
+
+    <string name="tip1_title">Пей больше воды</string>
+    <string name="tip1_short">Выпей стакан воды утром</string>
+    <string name="tip1_full">Начинай день со стакана воды, чтобы поддерживать водный баланс, улучшать концентрацию и легче просыпаться.</string>
+
+    <string name="tip2_title">Сделай зарядку</string>
+    <string name="tip2_short">Потрать 5–10 минут на движение</string>
+    <string name="tip2_full">Небольшая утренняя зарядка улучшает кровообращение, помогает проснуться и задаёт более бодрое настроение на день.</string>
+
+    <string name="tip3_title">Прогуляйся</string>
+    <string name="tip3_short">Погуляй хотя бы 20 минут</string>
+    <string name="tip3_full">Даже короткая прогулка на свежем воздухе помогает снизить стресс, улучшить настроение и поддержать физическую активность.</string>
+
+    <string name="tip4_title">Высыпайся</string>
+    <string name="tip4_short">Ложись спать вовремя</string>
+    <string name="tip4_full">Здоровый сон восстанавливает силы, поддерживает память и внимание, а также помогает организму лучше отдыхать.</string>
+
+    <string name="tip5_title">Ешь фрукты</string>
+    <string name="tip5_short">Добавь фрукт в свой рацион</string>
+    <string name="tip5_full">Фрукты содержат витамины, клетчатку и натуральную сладость, поэтому отлично подходят для полезного перекуса.</string>
+
+    <string name="tip6_title">Меньше сахара</string>
+    <string name="tip6_short">Сегодня выбери меньше сладкого</string>
+    <string name="tip6_full">Сокращение сахара помогает сделать уровень энергии более стабильным, поддерживает здоровье зубов и общее самочувствие.</string>
+
+    <string name="tip7_title">Сделай паузу от экрана</string>
+    <string name="tip7_short">Немного времени побудь без телефона</string>
+    <string name="tip7_full">Перерыв от экранов даёт отдых глазам, снижает усталость и помогает лучше сосредотачиваться на реальных делах.</string>
+
+    <string name="tip8_title">Следи за осанкой</string>
+    <string name="tip8_short">Обрати внимание на спину и плечи</string>
+    <string name="tip8_full">Правильная осанка уменьшает нагрузку на шею и спину, улучшает дыхание и делает сидение или ходьбу комфортнее.</string>
+
+    <string name="tip9_title">Полезный завтрак</string>
+    <string name="tip9_short">Начни день с нормальной еды</string>
+    <string name="tip9_full">Сытный и полезный завтрак даёт энергию для учёбы или работы и помогает лучше концентрироваться утром.</string>
+
+    <string name="tip10_title">Глубоко подыши</string>
+    <string name="tip10_short">Сделай 5 медленных глубоких вдохов</string>
+    <string name="tip10_full">Глубокое дыхание помогает успокоиться, уменьшить тревожность и быстрее привести мысли и эмоции в порядок.</string>
+
+    <string name="tip11_title">Убери рабочее место</string>
+    <string name="tip11_short">Наведи порядок там, где работаешь</string>
+    <string name="tip11_full">Чистое и организованное рабочее место помогает меньше отвлекаться и работать более эффективно.</string>
+
+    <string name="tip12_title">Сделай растяжку</string>
+    <string name="tip12_short">Разомни мышцы после сидения</string>
+    <string name="tip12_full">Простая растяжка снимает напряжение, улучшает гибкость и уменьшает дискомфорт после долгого сидения.</string>
+
+    <string name="tip13_title">Без фастфуда</string>
+    <string name="tip13_short">Сегодня выбери домашнюю еду</string>
+    <string name="tip13_full">Домашняя еда часто содержит более полезные ингредиенты и позволяет лучше контролировать состав и порции.</string>
+
+    <string name="tip14_title">Поставь маленькую цель</string>
+    <string name="tip14_short">Выбери одну простую цель на день</string>
+    <string name="tip14_full">Небольшая реальная цель создаёт ощущение прогресса и помогает поддерживать мотивацию шаг за шагом.</string>
+
+    <string name="tip15_title">Дай отдых глазам</string>
+    <string name="tip15_short">Используй правило 20-20-20</string>
+    <string name="tip15_full">Каждые 20 минут смотри 20 секунд вдаль, чтобы уменьшить напряжение глаз от экрана и чтения.</string>
+
+    <string name="tip16_title">Послушай музыку</string>
+    <string name="tip16_short">Включи любимую спокойную песню</string>
+    <string name="tip16_full">Музыка помогает поднять настроение, уменьшить усталость и создать более приятную атмосферу для работы или отдыха.</string>
+
+    <string name="tip17_title">Ешь больше овощей</string>
+    <string name="tip17_short">Добавь овощи в обед или ужин</string>
+    <string name="tip17_full">Овощи богаты витаминами, минералами и клетчаткой, что полезно для пищеварения и общего здоровья.</string>
+
+    <string name="tip18_title">Делай короткие перерывы</string>
+    <string name="tip18_short">Не работай без пауз</string>
+    <string name="tip18_full">Небольшие перерывы во время работы или учёбы помогают дольше сохранять продуктивность и уменьшают утомление.</string>
+
+    <string name="tip19_title">Запиши планы</string>
+    <string name="tip19_short">Составь простой список дел</string>
+    <string name="tip19_full">Когда планы записаны, голова становится свободнее, приоритеты понятнее, а важные задачи проще не забыть.</string>
+
+    <string name="tip20_title">Проветри комнату</string>
+    <string name="tip20_short">Открой окно на некоторое время</string>
+    <string name="tip20_full">Свежий воздух помогает лучше сосредотачиваться, делает помещение комфортнее и добавляет бодрости.</string>
+
+    <string name="tip21_title">Начни с улыбки</string>
+    <string name="tip21_short">Начни день с хорошего настроя</string>
+    <string name="tip21_full">Позитивное начало дня может повлиять на настроение в целом и сделать повседневные задачи легче.</string>
+
+    <string name="tip22_title">Держи воду рядом</string>
+    <string name="tip22_short">Поставь бутылку рядом с собой</string>
+    <string name="tip22_full">Если вода находится под рукой, становится проще пить её регулярно и поддерживать водный баланс в течение дня.</string>
+
+    <string name="tip23_title">Не спеши</string>
+    <string name="tip23_short">Попробуй делать всё спокойнее</string>
+    <string name="tip23_full">Более спокойный темп снижает стресс, уменьшает количество ошибок и помогает сосредоточиться на важном.</string>
+
+    <string name="tip24_title">Сделай доброе дело</string>
+    <string name="tip24_short">Помоги кому-то по мелочи</string>
+    <string name="tip24_full">Небольшой добрый поступок может улучшить день другому человеку и дать тебе чувство тепла и близости.</string>
+
+    <string name="tip25_title">Побудь в тишине</string>
+    <string name="tip25_short">Посиди спокойно несколько минут</string>
+    <string name="tip25_full">Тишина помогает замедлиться, восстановить внимание и лучше замечать собственные мысли и чувства.</string>
+
+    <string name="tip26_title">Больше двигайся</string>
+    <string name="tip26_short">По возможности выбери лестницу</string>
+    <string name="tip26_full">Дополнительное движение в течение дня полезно для сердца, выносливости и помогает компенсировать долгое сидение.</string>
+
+    <string name="tip27_title">Почитай немного</string>
+    <string name="tip27_short">Прочитай несколько страниц сегодня</string>
+    <string name="tip27_full">Чтение развивает внимание, расширяет кругозор и может стать спокойным и приятным способом отдохнуть.</string>
+
+    <string name="tip28_title">Заметь свой прогресс</string>
+    <string name="tip28_short">Оцени, что уже получилось</string>
+    <string name="tip28_full">Если замечать даже маленькие успехи, легче сохранять мотивацию, уверенность в себе и желание двигаться дальше.</string>
+
+    <string name="tip29_title">Убери лишние отвлечения</string>
+    <string name="tip29_short">Снизь шум и помехи вокруг</string>
+    <string name="tip29_full">Чем меньше отвлекающих факторов, тем проще сосредоточиться, быстрее закончить дело и чувствовать себя спокойнее.</string>
+
+    <string name="tip30_title">Подведи итог месяца</string>
+    <string name="tip30_short">Подумай, какие привычки помогли больше всего</string>
+    <string name="tip30_full">В конце месяца полезно вспомнить, какие привычки оказались самыми удобными и какие хочется сохранить дальше.</string>
 </resources>
