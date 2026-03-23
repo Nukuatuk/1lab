@@ -1,22 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Gallery</string>
+    <string name="app_name">Daily Tips</string>
+    <string name="day_number">Day %1$d</string>
+    <string name="day_preview">Day 1</string>
+    <string name="title_preview">Tip title</string>
+    <string name="description_preview">Short tip description</string>
+    <string name="tip_image">Tip image</string>
 
-    <string name="prev">Previous</string>
-    <string name="next">Next</string>
+    <string name="tip1_title">Drink more water</string>
+    <string name="tip1_short">Drink a glass of water in the morning</string>
+    <string name="tip1_full">Start your day with a glass of water to support hydration, improve focus, and help your body wake up more easily.</string>
 
-    <string name="cd_prev_button">Show previous photo</string>
-    <string name="cd_next_button">Show next photo</string>
+    <string name="tip2_title">Do morning exercise</string>
+    <string name="tip2_short">Spend 5–10 minutes moving</string>
+    <string name="tip2_full">A short morning exercise routine helps improve circulation, energizes the body, and creates a positive mood for the day.</string>
 
-    <string name="art1_title">Mysterious Cat</string>
-    <string name="art1_author">London (2002)</string>
-    <string name="art1_cd">Photo of a mysterious cat</string>
+    <string name="tip3_title">Take a walk</string>
+    <string name="tip3_short">Walk outside for at least 20 minutes</string>
+    <string name="tip3_full">Even a short walk in the fresh air can reduce stress, improve mood, and support overall physical activity.</string>
 
-    <string name="art2_title">Sneaking Cat</string>
-    <string name="art2_author">Sochi (1999)</string>
-    <string name="art2_cd">Photo of a sneaking cat</string>
+    <string name="tip4_title">Get enough sleep</string>
+    <string name="tip4_short">Go to bed on time tonight</string>
+    <string name="tip4_full">Healthy sleep restores energy, supports memory and concentration, and helps the body recover after a busy day.</string>
 
-    <string name="art3_title">Fiery Horse</string>
-    <string name="art3_author">Rome (1250)</string>
-    <string name="art3_cd">Photo of a fiery horse</string>
+    <string name="tip5_title">Eat fruit</string>
+    <string name="tip5_short">Add fruit to your daily meals</string>
+    <string name="tip5_full">Fruit contains vitamins, fiber, and natural sweetness, making it a healthy snack and a good part of a balanced diet.</string>
+
+    <string name="tip6_title">Reduce sugar</string>
+    <string name="tip6_short">Choose fewer sweets today</string>
+    <string name="tip6_full">Cutting down on sugar helps stabilize energy levels, supports dental health, and can improve your overall well-being.</string>
+
+    <string name="tip7_title">Take a screen break</string>
+    <string name="tip7_short">Spend some time away from your phone</string>
+    <string name="tip7_full">A break from screens gives your eyes rest, reduces mental fatigue, and helps you focus better on real-life activities.</string>
+
+    <string name="tip8_title">Keep good posture</string>
+    <string name="tip8_short">Pay attention to your back and shoulders</string>
+    <string name="tip8_full">Good posture reduces strain on your neck and back, helps breathing, and makes sitting or standing more comfortable.</string>
+
+    <string name="tip9_title">Have a healthy breakfast</string>
+    <string name="tip9_short">Start the day with proper food</string>
+    <string name="tip9_full">A nutritious breakfast provides energy for study or work and helps maintain concentration during the first half of the day.</string>
+
+    <string name="tip10_title">Practice deep breathing</string>
+    <string name="tip10_short">Take 5 slow deep breaths</string>
+    <string name="tip10_full">Deep breathing can help calm your mind, reduce anxiety, and quickly bring more balance to your body and emotions.</string>
+
+    <string name="tip11_title">Tidy your workspace</string>
+    <string name="tip11_short">Clean the area where you work</string>
+    <string name="tip11_full">A tidy workspace helps you stay organized, reduce distractions, and work more efficiently during the day.</string>
+
+    <string name="tip12_title">Stretch your body</string>
+    <string name="tip12_short">Loosen muscles after sitting</string>
+    <string name="tip12_full">Simple stretching helps release tension, improve flexibility, and reduce discomfort after long periods of sitting.</string>
+
+    <string name="tip13_title">Avoid fast food</string>
+    <string name="tip13_short">Choose homemade food instead</string>
+    <string name="tip13_full">Homemade meals often contain better ingredients and allow you to control portions, salt, sugar, and fats more easily.</string>
+
+    <string name="tip14_title">Set a small goal</string>
+    <string name="tip14_short">Choose one simple goal for today</string>
+    <string name="tip14_full">A small realistic goal helps create a sense of progress and motivates you to continue improving step by step.</string>
+
+    <string name="tip15_title">Rest your eyes</string>
+    <string name="tip15_short">Use the 20-20-20 rule</string>
+    <string name="tip15_full">Every 20 minutes, look at something far away for 20 seconds to reduce eye strain caused by screens and reading.</string>
+
+    <string name="tip16_title">Listen to music</string>
+    <string name="tip16_short">Play a favorite relaxing song</string>
+    <string name="tip16_full">Music can improve mood, reduce tiredness, and create a more pleasant atmosphere during work, study, or rest.</string>
+
+    <string name="tip17_title">Eat more vegetables</string>
+    <string name="tip17_short">Add vegetables to lunch or dinner</string>
+    <string name="tip17_full">Vegetables are rich in vitamins, minerals, and fiber, which support digestion and contribute to a healthier diet.</string>
+
+    <string name="tip18_title">Take short breaks</string>
+    <string name="tip18_short">Do not work without pauses</string>
+    <string name="tip18_full">Short breaks during work or study help maintain productivity, reduce mental fatigue, and make difficult tasks easier.</string>
+
+    <string name="tip19_title">Write down your plans</string>
+    <string name="tip19_short">Make a simple to-do list</string>
+    <string name="tip19_full">Writing plans on paper or in notes helps clear your mind, organize priorities, and remember important tasks more easily.</string>
+
+    <string name="tip20_title">Let in fresh air</string>
+    <string name="tip20_short">Open the window for a while</string>
+    <string name="tip20_full">Fresh air can improve concentration, make the room feel more comfortable, and help you feel more awake and active.</string>
+
+    <string name="tip21_title">Start with a smile</string>
+    <string name="tip21_short">Begin the day positively</string>
+    <string name="tip21_full">A positive start can influence your mood for the whole day and make it easier to deal with everyday tasks and stress.</string>
+
+    <string name="tip22_title">Keep water nearby</string>
+    <string name="tip22_short">Place a bottle on your desk</string>
+    <string name="tip22_full">When water is close to you, it becomes easier to drink regularly and maintain healthy hydration throughout the day.</string>
+
+    <string name="tip23_title">Slow down</string>
+    <string name="tip23_short">Try doing things more calmly</string>
+    <string name="tip23_full">A calmer pace can reduce stress, lower the number of mistakes, and help you stay more focused on what matters.</string>
+
+    <string name="tip24_title">Do something kind</string>
+    <string name="tip24_short">Help someone in a small way</string>
+    <string name="tip24_full">A simple act of kindness can make another person’s day better and also bring you a stronger sense of warmth and connection.</string>
+
+    <string name="tip25_title">Spend a moment in silence</string>
+    <string name="tip25_short">Sit quietly for a few minutes</string>
+    <string name="tip25_full">Silence helps the mind slow down, restores attention, and gives you a chance to better notice your thoughts and feelings.</string>
+
+    <string name="tip26_title">Move more</string>
+    <string name="tip26_short">Take the stairs when possible</string>
+    <string name="tip26_full">Extra movement during the day supports the heart, improves endurance, and helps balance long hours of sitting.</string>
+
+    <string name="tip27_title">Read a little</string>
+    <string name="tip27_short">Read a few pages today</string>
+    <string name="tip27_full">Reading strengthens attention, expands knowledge, and can also become a calm and enjoyable way to relax.</string>
+
+    <string name="tip28_title">Appreciate your progress</string>
+    <string name="tip28_short">Notice what you already achieved</string>
+    <string name="tip28_full">Recognizing small successes helps maintain motivation, builds confidence, and reminds you that steady effort matters.</string>
+
+    <string name="tip29_title">Reduce distractions</string>
+    <string name="tip29_short">Remove unnecessary noise around you</string>
+    <string name="tip29_full">Fewer distractions make it easier to concentrate, complete tasks faster, and stay calmer while working or studying.</string>
+
+    <string name="tip30_title">Review your month</string>
+    <string name="tip30_short">Think about what habits helped most</string>
+    <string name="tip30_full">At the end of the month, reflect on which habits felt useful and decide which ones you want to keep in daily life.</string>
 </resources>
